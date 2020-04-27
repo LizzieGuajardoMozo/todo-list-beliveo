@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import catIcon from './cat.svg';
+
 
 function App() {
-
   var  loadedUndone = localStorage.getItem("todo")  
   var  loadedDone = localStorage.getItem("done")
 
@@ -26,9 +27,11 @@ function App() {
     saveInLocalStorage();
   })
 
+
   const [undoneTasks,setNewUndoneTask] = useState(loadedUndone);  
   const [newTask,setNewTask] = useState("");
   const [doneTasks,setDoneTask] = useState(loadedDone);
+
 
 
   function saveInLocalStorage(){
@@ -42,6 +45,7 @@ function App() {
     arrTemp.splice(index,1);
     setNewUndoneTask(arrTemp); 
     saveInLocalStorage();
+
   };
 
   function markAsUndone(index){
@@ -73,7 +77,7 @@ function App() {
           <div className="col-12">
             <div className="card" id="new">   
                 <div className="input-group text-center">
-                  <input id="newitem" type="text" class="form-control" value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="Add a new Task" onKeyPress={event => {if(event.key == "Enter"){addTask()}}}/>
+                  <input id="newitem" type="text" className="form-control" value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="Add a new Task" onKeyPress={event => {if(event.key == "Enter"){addTask()}}}/>
                   <div className="input-group-append">
                     <button className="btn btn-primary" type="submit" onClick={addTask}>
                       <i className="material-icons align-middle" aria-hidden="true" >add_circle_outline</i>
@@ -85,13 +89,22 @@ function App() {
 
           <div className="col-12">
             <div className="card" id="todo">
-              <h5 className="card-header text-center">My To-Do tasks</h5>
+              <h5 className="card-header text-center">To-Do tasks</h5>
               <div className="card-body">
-                {undoneTasks.map(
+                {undoneTasks.length===0 ? 
+                <div text-center>
+                  <h4 className="text-center">You Have no Tasks Left!</h4>
+                  <p className="text-center">Play a videogame, take a nap or add a new task</p>
+                  <div className="text-center">
+                    <img src={catIcon} alt="consider taking a nap" className="asset text-center"/>
+                  </div>
+                </div>
+                :                
+                undoneTasks.map(
                     (task,index) => (
-                      <div class="input-group">
+                      <div className="input-group">
                         <div className="task-row">
-                          <div class="input-group-prepend">
+                          <div className="input-group-append">
                             <i className="check material-icons icon-blue" onClick={()=> {completeTask(index);}}> check_box_outline_blank </i>
                           </div>
                         </div>
@@ -112,21 +125,27 @@ function App() {
             <div className="card" id="done">
               <h5 className="card-header text-center">Done tasks</h5>
               <div className="card-body">
-              {doneTasks.map(
-                    (task,index) => (
-                      <div class="input-group">
-                        <div className="task-row">
-                          <div class="input-group-prepend">
-                          <i className="check material-icons align-middle icon-blue" onClick={()=> {markAsUndone(index)}}> check_box </i></div>
-                        </div>
-                        <div className="col-10 task-row">
-                          <label className="form-check-label done">
-                            {task}
-                          </label> 
-                        </div>
-                      </div>     
+              {doneTasks.length===0 ? 
+                <div text-center>
+                  <h4 className="text-center">You Haven't completed any task</h4>
+                  <p className="text-center">Not very impressive</p>
+                </div>
+                :                
+                doneTasks.map(
+                      (task,index) => (
+                        <div className="input-group">
+                          <div className="task-row">
+                            <div className="input-group-append">
+                            <i className="check material-icons align-middle icon-blue" onClick={()=> {markAsUndone(index)}}> check_box </i></div>
+                          </div>
+                          <div className="col-10 task-row">
+                            <label className="form-check-label done">
+                              {task}
+                            </label> 
+                          </div>
+                        </div>     
+                      )
                     )
-                  )
                 }                     
               </div>
             </div>

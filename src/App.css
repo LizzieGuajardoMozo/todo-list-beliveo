@@ -51,12 +51,21 @@ input[type="text"]:focus {
   cursor: pointer;  
 }
 
+.trash{
+  cursor:pointer;
+  color: #D61A3C
+}
+
 .input-group-prepend
 {
   padding: 3%;
-  
+
 }
 
+.asset
+{
+  width: 30%;
+}
 
 .icon-blue{
   color: #0970dc;
@@ -75,6 +84,6 @@ input[type="text"]:focus {
 #newitem{
   margin: 10px;
   background-color: transparent;
-  width: 80%;
+  width: 70%;
 }
 
