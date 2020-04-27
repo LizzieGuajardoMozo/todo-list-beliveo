@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "body ">
+      <div class="container">
+        <row>
+          <div class="col-12">
+            <div className="card" id="todo">
+              <h5 className="card-header text-center">My To-Do tasks</h5>
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div className="card" id="done">
+              <h5 className="card-header text-center">Done tasks</h5>
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+        </row>  
+      </div>    
     </div>
+
+
+        
   );
 }
 
