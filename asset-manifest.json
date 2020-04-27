@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/todo-list-beliveo/static/css/main.ef17f0b1.chunk.css",
+    "main.js": "/todo-list-beliveo/static/js/main.6769cf4a.chunk.js",
+    "main.js.map": "/todo-list-beliveo/static/js/main.6769cf4a.chunk.js.map",
+    "runtime-main.js": "/todo-list-beliveo/static/js/runtime-main.bf088cf0.js",
+    "runtime-main.js.map": "/todo-list-beliveo/static/js/runtime-main.bf088cf0.js.map",
+    "static/css/2.74189dbb.chunk.css": "/todo-list-beliveo/static/css/2.74189dbb.chunk.css",
+    "static/js/2.ebe1cbfc.chunk.js": "/todo-list-beliveo/static/js/2.ebe1cbfc.chunk.js",
+    "static/js/2.ebe1cbfc.chunk.js.map": "/todo-list-beliveo/static/js/2.ebe1cbfc.chunk.js.map",
+    "index.html": "/todo-list-beliveo/index.html",
+    "precache-manifest.49494a9c087c36f550ad5fed3cd17ec6.js": "/todo-list-beliveo/precache-manifest.49494a9c087c36f550ad5fed3cd17ec6.js",
+    "service-worker.js": "/todo-list-beliveo/service-worker.js",
+    "static/css/2.74189dbb.chunk.css.map": "/todo-list-beliveo/static/css/2.74189dbb.chunk.css.map",
+    "static/css/main.ef17f0b1.chunk.css.map": "/todo-list-beliveo/static/css/main.ef17f0b1.chunk.css.map",
+    "static/js/2.ebe1cbfc.chunk.js.LICENSE.txt": "/todo-list-beliveo/static/js/2.ebe1cbfc.chunk.js.LICENSE.txt",
+    "static/media/cat.svg": "/todo-list-beliveo/static/media/cat.713d7b95.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf088cf0.js",
+    "static/css/2.74189dbb.chunk.css",
+    "static/js/2.ebe1cbfc.chunk.js",
+    "static/css/main.ef17f0b1.chunk.css",
+    "static/js/main.6769cf4a.chunk.js"
+  ]
+}
