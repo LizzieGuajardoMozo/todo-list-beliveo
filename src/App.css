@@ -1,15 +1,16 @@
 
 .card {
   margin:auto;
-  width: 60%;
+  width: 80%;
   border-radius: 3px;
   opacity: 0.9;
   box-shadow: 3px 3px 10px 0px rgba(161,161,161,0.7);
   background-image: linear-gradient(to bottom right, #ccffff 0%, #ffccff 100%);
 }
 
-#todo, #done{
+#todo, #done, #new{
   margin-top:1%;
+  margin-bottom: 1%  
 }
 
 .body {
@@ -32,21 +33,6 @@
 
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-
-
-li {
-  list-style: none;
-  padding: 3px 0px;
-}
-
-li > span {
-  padding-left: 10px;
-}
-
 input[type="text"] {
   margin: auto;
   padding: 10px;
@@ -62,22 +48,27 @@ input[type="text"]:focus {
 }
 
 .check{
-  cursor: pointer
+  cursor: pointer;  
 }
+
+.input-group-prepend
+{
+  padding: 3%;
+  
+}
+
+
+.icon-blue{
+  color: #0970dc;
+}
+
 
 .done {
   text-decoration: line-through;
-  color: #8f919c; 
+  color: #0970dc; 
 }
 
-/*Span que contiene a linea para escribir y el boton de enviar*/
-.addElement{
-  display: flex;
-  justify-content: center;
-  height: 35px;
-}
-
-.card-body{
+.card-body, .task-row{
   padding:0px
 }
 
