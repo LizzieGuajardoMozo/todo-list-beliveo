@@ -8,8 +8,8 @@
   background-image: linear-gradient(to bottom right, #ccffff 0%, #ffccff 100%);
 }
 
-#done{
-  margin-top: 4%;
+#todo, #done{
+  margin-top:1%;
 }
 
 .body {
@@ -37,9 +37,6 @@ h1 {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.form {
-  padding: 10px 15px 30px 15px;
-}
 
 li {
   list-style: none;
@@ -64,15 +61,13 @@ input[type="text"]:focus {
   border-bottom: 2px solid #22B4E2;
 }
 
+.check{
+  cursor: pointer
+}
+
 .done {
   text-decoration: line-through;
   color: #8f919c; 
-}
-
-img {
-  width: 35px;
-  vertical-align: middle;
-  cursor: pointer;
 }
 
 /*Span que contiene a linea para escribir y el boton de enviar*/
@@ -82,7 +77,13 @@ img {
   height: 35px;
 }
 
+.card-body{
+  padding:0px
+}
+
 #newitem{
   margin: 10px;
   background-color: transparent;
+  width: 80%;
 }
+
